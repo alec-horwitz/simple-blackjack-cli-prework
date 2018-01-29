@@ -31,11 +31,13 @@ end
 def hit?(card_total)
   prompt_user
   input = get_user_input
-  loop do
+  valid_command = false
+  until valid_command
     if input == "h"
+      valid_command = true
       card_total += deal_card
     elsif input == "s"
-      Break
+      valid_command = true
     else
       invalid_command
     end
