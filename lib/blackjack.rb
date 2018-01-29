@@ -54,5 +54,21 @@ end
 #####################################################
 
 def runner
-  # code runner here
+  welcome
+  card_total = initial_round
+  until card_total > 21
+    hit?(card_total)
+  end
+  end_game(card_total)
+
+
+  # deal_card
+  # display_card_total(card_total)
+  # prompt_user
+  # get_user_input
+  # end_game(card_total)
+  # initial_round
+  # hit?(card_total)
+  # invalid_command
+
 end
